@@ -10,4 +10,14 @@
 
 @interface CVViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (nonatomic, strong) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSDictionary *json;
+@property (strong, nonatomic) NSNumber *comicList;
+@property (strong, nonatomic) NSString *alt;
+@property (strong, nonatomic) NSURLSession *session;
+
+
 @end
