@@ -22,8 +22,6 @@
 {
     [super viewDidLoad];
     //Scrolling
-    self.scrollView.minimumZoomScale = 0.43;
-    self.scrollView.maximumZoomScale = 6.0;
     self.scrollView.delegate = self;
     
     //Loads random comic from site
@@ -98,16 +96,7 @@
     {
         int horizontalOffset = (screenWidth - img.size.width)/2;
         self.imageView.frame = CGRectMake(horizontalOffset,0,img.size.width,img.size.height);
-        self.scrollView.zoomScale = 1;
     }
-//    else if(screenWidth/img.size.width >= self.scrollView.minimumZoomScale)
-//    {
-//        self.scrollView.zoomScale = screenWidth/img.size.width;
-//    }
-//    else
-//    {
-//        self.scrollView.zoomScale = self.scrollView.minimumZoomScale;
-//    }
     
     self.imageView.userInteractionEnabled = YES;
     UITapGestureRecognizer *altTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(altAlert)];
